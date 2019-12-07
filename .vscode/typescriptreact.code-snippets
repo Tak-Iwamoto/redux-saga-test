@@ -1,0 +1,78 @@
+{
+	"Functional Component": {
+		"prefix": "fc",
+		"body": [
+			"const $1: FC<$2> = ($3) => {};",
+		],
+	},
+	"interface": {
+		"prefix": "itf",
+		"body": [
+			"interface $1 {$2}",
+		],
+	},
+	"reactRedux": {
+    "prefix": "rcredux",
+    "body": [
+      "import React, { FC } from 'react'",
+			"import { connect } from 'react-redux'",
+			 "import { bindActionCreators, Dispatch } from 'redux';",
+      "export const ${1:${TM_FILENAME_BASE}} : FC<$2> {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<div>",
+      "\t\t\t\t$0",
+      "\t\t\t</div>",
+      "\t\t)",
+      "\t}",
+      "}",
+			"",
+			"const mapStateToProps = (state: $3): StateProps =>({});",
+      "",
+			"const mapDispatchToProps = (dispatch: Dispatch): DispatchProps =>",
+				"\tbindActionCreators(",
+					"\t{",
+							"\t\t$4: ($5: $6) => $7({ $5 }),",
+					"\t},",
+					"\tdispatch,",
+				");",
+      "",
+      "export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME_BASE}})",
+      ""
+    ],
+    "description": "Creates a React component class with connected redux and ES7 module system"
+  },
+	"import React": {
+    "prefix": "imr",
+    "body": ["import React, { FC } from 'react';"]
+	},
+	"import redux statement": {
+    "prefix": "redux",
+    "body": ["import { connect } from 'react-redux';", "import { bindActionCreators, Dispatch } from 'redux';"]
+	},
+	"import": {
+    "prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}'$0;"
+  },
+	"exportDefault": {
+    "prefix": "exp",
+    "body": "export default $1$0;"
+	},
+	"consoleLog": {
+    "prefix": "clg",
+    "body": "console.log(${1:object});",
+    "description": "Displays a message in the console"
+  },
+	"mapStateToProps": {
+		"prefix": "maps",
+		"body": [
+			"const mapDispatchToProps = (dispatch: Dispatch): DispatchProps =>",
+				"\tbindActionCreators(",
+					"\t{",
+							"\t\t$1: ($2: $3) => $4({ $2 }),",
+					"\t},",
+					"\tdispatch,",
+				");",
+		],
+	}
+}
