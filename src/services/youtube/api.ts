@@ -22,7 +22,7 @@ export const getVideoFactory = (optionConfig?: ApiConfig) => {
   const getVideo = async (videoId: string) => {
     try {
       const res = await instance.get(
-        `/videos/?part=id,snippetcontentDetails&id=${videoId}&key=${process.env.API_KEY}`,
+        `/videos/?part=id,snippet,contentDetails&id=${videoId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`,
       );
       if (res.status !== 200) {
         throw new Error('Server Error');
