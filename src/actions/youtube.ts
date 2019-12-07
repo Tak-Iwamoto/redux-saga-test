@@ -6,7 +6,7 @@ import * as ActionType from './youtubeConstants';
 interface GetVideoParams {
   videoId: string;
 }
-interface GetMembersResult {
+interface GetVideoResult {
   video: VideoType;
 }
 
@@ -16,7 +16,7 @@ export const getVideo = {
     payload: params,
   }),
 
-  succeed: (params: GetVideoParams, result: GetMembersResult) => ({
+  succeed: (params: GetVideoParams, result: GetVideoResult) => ({
     type: ActionType.GET_VIDEO_SUCCEED as typeof ActionType.GET_VIDEO_SUCCEED,
     payload: { params, result },
   }),

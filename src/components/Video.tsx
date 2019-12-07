@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import {
+  Avatar,
   Card,
-  CardMedia,
   CardContent,
   Typography,
   IconButton,
@@ -24,13 +24,15 @@ const Video: FC<VideoProps> = ({ video, isLoading = false }) => {
       ? `${video.thumbnails.default.url}`
       : '/public/assets/image_not_found.png';
 
+  console.log(title);
+  console.log(thumbnailURL);
   return (
     <>
       {isLoading ? (
         <Spinner />
       ) : (
         <Card>
-          <CardMedia image={thumbnailURL} />
+          <Avatar src={thumbnailURL} />
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">
               {title}
