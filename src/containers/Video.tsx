@@ -6,6 +6,7 @@ import { VideoType } from '../services/youtube/models';
 import Video, { VideoProps } from '../components/Video';
 import { VideoState } from '../reducers/video_reducer';
 import { getVideo } from '../actions/youtube';
+import Spinner from '../components/Spinner';
 
 interface StateProps {
   video: VideoType;
@@ -46,7 +47,10 @@ const VideoContainer: FC<EnhancedVideoProps> = ({
     getVideoStart(videoId);
   }, []);
 
-  return <Video video={video} isLoading={isLoading} />;
+  console.log(video);
+
+  if (isLoading) return <Spinner />;
+  return <Video video={video} />;
 };
 
 export default withRouter(

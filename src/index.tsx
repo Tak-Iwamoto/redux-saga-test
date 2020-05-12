@@ -5,7 +5,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { BrowserRouter } from 'react-router-dom';
 import createSagaMiddleware from 'redux-saga';
 import videoReducer from './reducers/video_reducer';
-import rootSaga from './sagas/youtube';
+import rootSaga from './sagas/rootSaga';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';

@@ -1,4 +1,4 @@
-import { all, call, fork, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import * as ActionType from '../actions/youtubeConstants';
 import { getVideo } from '../actions/youtube';
 import { getVideoFactory } from '../services/youtube/api';
@@ -15,10 +15,6 @@ function* runGetVideo(action: ReturnType<typeof getVideo.start>) {
   }
 }
 
-export function* watchGetVideo() {
+export function* videoSaga() {
   yield takeLatest(ActionType.GET_VIDEO_START, runGetVideo);
-}
-
-export default function* rootSaga() {
-  yield all([fork(watchGetVideo)]);
 }
