@@ -24,8 +24,6 @@ const Video: FC<VideoProps> = ({ video, isLoading = false }) => {
       ? `${video.thumbnails.default.url}`
       : '/public/assets/image_not_found.png';
 
-  console.log(title);
-  console.log(thumbnailURL);
   return (
     <>
       {isLoading ? (

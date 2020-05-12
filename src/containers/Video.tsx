@@ -43,7 +43,6 @@ const VideoContainer: FC<EnhancedVideoProps> = ({
   const { videoId } = match.params;
 
   useEffect(() => {
-    console.log(videoId);
     getVideoStart(videoId);
   }, []);
 
