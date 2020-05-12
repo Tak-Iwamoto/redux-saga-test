@@ -16,7 +16,7 @@
     "body": [
       "import React, { FC } from 'react'",
 			"import { connect } from 'react-redux'",
-			 "import { bindActionCreators, Dispatch } from 'redux';",
+			"import { bindActionCreators, Dispatch } from 'redux';",
       "export const ${1:${TM_FILENAME_BASE}} : FC<$2> {",
       "\trender() {",
       "\t\treturn (",
