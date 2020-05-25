@@ -1,14 +1,5 @@
 import React, { FC } from 'react';
-import {
-  Avatar,
-  Card,
-  CardContent,
-  Typography,
-  IconButton,
-  CardActions,
-} from '@material-ui/core';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+import { Image, Card, Icon, Button } from 'semantic-ui-react';
 import { VideoType } from '../services/youtube/models';
 
 export interface VideoProps {
@@ -25,20 +16,20 @@ const Video: FC<VideoProps> = ({ video }) => {
   return (
     <>
       <Card>
-        <Avatar src={thumbnailURL} />
-        <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
+        <Image src={thumbnailURL} circular />
+        <Card.Content>
+          <Card.Header variant="body2" color="textSecondary" component="p">
             {title}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <IconButton>
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton>
-            <ShareIcon />
-          </IconButton>
-        </CardActions>
+          </Card.Header>
+        </Card.Content>
+        <Card.Content extra>
+          <Button>
+            <Icon name="heart" />
+          </Button>
+          <Button>
+            <Icon name="share" />
+          </Button>
+        </Card.Content>
       </Card>
       )
     </>

@@ -1,25 +1,15 @@
 import React, { FC } from 'react';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      display: 'flex',
-      '& > * + *': {
-        marginLeft: theme.spacing(2),
-      },
-    },
-  }),
-);
+import { Segment, Loader, Dimmer } from 'semantic-ui-react';
 
 const Spinner: FC = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <CircularProgress />
-    </div>
+    <>
+      <Segment>
+        <Dimmer>
+          <Loader size="large">Loading</Loader>
+        </Dimmer>
+      </Segment>
+    </>
   );
 };
 

@@ -4,7 +4,7 @@ import { bindActionCreators, Dispatch } from 'redux';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { VideoType } from '../services/youtube/models';
 import Video, { VideoProps } from '../components/Video';
-import { VideoState } from '../reducers/video_reducer';
+import { VideoState } from '../reducers/videoReducer';
 import { getVideo } from '../actions/youtube';
 import Spinner from '../components/Spinner';
 
