@@ -1,11 +1,11 @@
-import React, { FC, useEffect } from 'react';
-import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
-import { useParams } from 'react-router';
-import { VideoType } from '../services/youtube/models';
-import Video, { VideoProps } from '../components/Video';
-import { VideoState } from '../reducers/videoReducer';
-import { getVideo } from '../actions/youtube';
+import React, {FC, useEffect} from 'react';
+import {connect} from 'react-redux';
+import {Dispatch} from 'redux';
+import {useParams} from 'react-router';
+import {VideoType} from '../services/youtube/models';
+import Video, {VideoProps} from '../components/Video';
+import {VideoState} from '../reducers/videoReducer';
+import {getVideo} from '../actions/youtube';
 import Spinner from '../components/Spinner';
 
 interface StateProps {
@@ -25,7 +25,7 @@ const mapStateToProps = (state: VideoState): StateProps => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  getVideoStart: videoId => dispatch(getVideo.start({ videoId })),
+  getVideoStart: videoId => dispatch(getVideo.start({videoId})),
 });
 
 const VideoContainer: FC<EnhancedVideoProps> = ({
@@ -33,7 +33,7 @@ const VideoContainer: FC<EnhancedVideoProps> = ({
   isLoading,
   getVideoStart,
 }) => {
-  const { videoId } = useParams();
+  const {videoId} = useParams();
 
   useEffect(() => {
     getVideoStart(videoId);

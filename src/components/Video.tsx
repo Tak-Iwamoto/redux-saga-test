@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
-import { Image, Card, Icon, Button } from 'semantic-ui-react';
-import { VideoType } from '../services/youtube/models';
+import React, {FC} from 'react';
+import {Image, Card, Icon, Button} from 'semantic-ui-react';
+import {VideoType} from '../services/youtube/models';
 
 export interface VideoProps {
   video: VideoType;
 }
 
-const Video: FC<VideoProps> = ({ video }) => {
+const Video: FC<VideoProps> = ({video}) => {
   const title = video.title ? video.title : 'undefined';
   const thumbnailURL =
     video.thumbnails && video.thumbnails.default

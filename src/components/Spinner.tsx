@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Segment, Loader, Dimmer } from 'semantic-ui-react';
+import React, {FC} from 'react';
+import {Segment, Loader, Dimmer} from 'semantic-ui-react';
 
 const Spinner: FC = () => {
   return (

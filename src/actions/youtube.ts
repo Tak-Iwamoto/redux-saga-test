@@ -1,6 +1,6 @@
-import { AxiosError } from 'axios';
+import {AxiosError} from 'axios';
 
-import { VideoType } from '../services/youtube/models';
+import {VideoType} from '../services/youtube/models';
 import * as ActionType from './youtubeConstants';
 
 interface GetVideoParams {
@@ -18,12 +18,12 @@ export const getVideo = {
 
   succeed: (params: GetVideoParams, result: GetVideoResult) => ({
     type: ActionType.GET_VIDEO_SUCCEED as typeof ActionType.GET_VIDEO_SUCCEED,
-    payload: { params, result },
+    payload: {params, result},
   }),
 
   fail: (params: GetVideoParams, error: AxiosError) => ({
     type: ActionType.GET_VIDEO_FAIL as typeof ActionType.GET_VIDEO_FAIL,
-    payload: { params, error },
+    payload: {params, error},
     error: true,
   }),
 };

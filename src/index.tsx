@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
-import { BrowserRouter } from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {applyMiddleware, createStore} from 'redux';
+import {BrowserRouter} from 'react-router-dom';
 import createSagaMiddleware from 'redux-saga';
-import { rootReducer } from './reducers/rootReducer';
+import {rootReducer} from './reducers/rootReducer';
 import rootSaga from './sagas/rootSaga';
 import 'semantic-ui-css/semantic.min.css';
 

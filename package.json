@@ -71,7 +71,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
+      "prettier --config .prettierrc.js --write",
       "eslint --fix",
       "git add"
     ],
@@ -82,8 +82,11 @@
   },
   "prettier": {
     "bracketSpacing": false,
+    "printWidth": 80,
+    "semi": true,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "all",
+    "useTabs": false
   },
   "husky": {
     "hooks": {

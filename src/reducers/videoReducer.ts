@@ -1,9 +1,9 @@
-import { Reducer } from 'redux';
-import { AxiosError } from 'axios';
+import {Reducer} from 'redux';
+import {AxiosError} from 'axios';
 
-import { YoutubeAction } from '../actions/youtube';
+import {YoutubeAction} from '../actions/youtube';
 import * as ActionType from '../actions/youtubeConstants';
-import { VideoType } from '../services/youtube/models';
+import {VideoType} from '../services/youtube/models';
 
 export interface VideoState {
   video: VideoType;

@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-catch */
 import axios from 'axios';
-import { VideoType } from './models';
+import {VideoType} from './models';
 
 axios.defaults.baseURL = 'https://www.googleapis.com/youtube/v3';
 axios.defaults.headers.common = {

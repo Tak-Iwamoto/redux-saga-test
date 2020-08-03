@@ -3,14 +3,14 @@ export interface Action<Payload> {
   payload?: Payload;
   error?: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  meta?: { [key: string]: any } | null;
+  meta?: {[key: string]: any} | null;
 }
 
 export interface ActionStart<ActionType, Params> {
   type: ActionType;
   payload?: Params;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  meta?: { [key: string]: any } | null;
+  meta?: {[key: string]: any} | null;
 }
 
 export interface ActionSucceed<ActionType, Params, Result> {
@@ -20,7 +20,7 @@ export interface ActionSucceed<ActionType, Params, Result> {
     result: Result;
   };
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  meta?: { [key: string]: any } | null;
+  meta?: {[key: string]: any} | null;
 }
 
 export interface ActionFail<ActionType, Params, AnyError> {
@@ -31,5 +31,5 @@ export interface ActionFail<ActionType, Params, AnyError> {
   };
   error: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  meta?: { [key: string]: any } | null;
+  meta?: {[key: string]: any} | null;
 }

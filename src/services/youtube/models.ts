@@ -1,4 +1,4 @@
-import { youtube_v3 } from 'googleapis/build/src';
+import {youtube_v3} from 'googleapis/build/src';
 
 export interface VideoType {
   categoryId?: string | null;

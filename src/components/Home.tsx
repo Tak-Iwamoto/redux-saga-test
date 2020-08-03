@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import { Grid } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import React, {FC} from 'react';
+import {Grid} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 
 const Home: FC = () => {
   return (

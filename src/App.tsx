@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Redirect, Route, Switch } from 'react-router';
+import React, {FC} from 'react';
+import {Redirect, Route, Switch} from 'react-router';
 import Home from './components/Home';
 import Video from './containers/Video';
 
